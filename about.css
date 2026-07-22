@@ -1,0 +1,350 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background: #fffefe;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    background: #222121;
+    color: #f7f7f7;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.menu-icon {
+    font-size: 24px;
+    padding: 20px;
+    text-align: right;
+    cursor: pointer;
+    display: block;
+    color: #fff;
+    transition: transform 0.3s ease;
+}
+
+.menu-icon:hover {
+    transform: rotate(90deg);
+}
+
+.nav-list {
+    display: none;
+}
+
+nav ul li {
+    list-style: none;
+    display: inline;
+    margin-right: 20px;
+    font-weight: 550;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 4px;
+    transition: opacity 0.3s ease;
+}
+
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background: rgb(245, 37, 9);
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    opacity: .8;
+}
+
+nav ul li a:hover::after,
+nav ul li a.active::after {
+    width: 100%;
+}
+
+/* ABOUT HERO */
+.about-hero {
+    width: 100%;
+    background: #222121;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: fadeIn 1s ease;
+}
+
+.hero-content h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+    animation: fadeInUp 0.8s ease;
+}
+
+.hero-content p {
+    font-size: 18px;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* ABOUT SECTION */
+.about-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 50px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.about-image {
+    flex: 1 1 250px;
+    max-width: 260px;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 240px;
+    border-radius: 8px;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-image img:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.18);
+}
+
+.about-text {
+    flex: 1 1 300px;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.about-text h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: rgb(245, 37, 9);
+    border-radius: 2px;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* MISSION SECTION */
+.mission {
+    padding: 50px 16px;
+    text-align: center;
+    background: #f7f7f7;
+}
+
+.mission h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.mission h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: rgb(245, 37, 9);
+    border-radius: 2px;
+}
+
+.mission-cards {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 30px 20px;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.18);
+}
+
+.card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 15px;
+    color: #555;
+}
+
+/* WHY CHOOSE US */
+.why-us {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 50px 16px;
+    text-align: center;
+}
+
+.why-us h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.why-us h2::after {
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: rgb(245, 37, 9);
+    border-radius: 2px;
+}
+
+.why-us ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+}
+
+.why-us ul li {
+    font-size: 17px;
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 12px 25px;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+}
+
+.why-us ul li:hover {
+    transform: translateY(-5px);
+    background: rgb(245, 37, 9);
+    color: #fff;
+}
+
+/* FOOTER */
+footer {
+    background: #333;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+footer a {
+    color: #fff;
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 768px) {
+    .menu-icon {
+        display: none;
+    }
+
+    .nav-list {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 28px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .about-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
