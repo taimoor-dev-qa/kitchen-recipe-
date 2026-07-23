@@ -35,11 +35,10 @@ header {
 }
 
 .logo {
-    font-size: 20px;
-    font-weight: 600;
+    font-size: 24px;
     color: #ffffff;
+    transition: transform 0.3s ease;
 }
-
 
 .logo:hover {
     transform: scale(1.05);
