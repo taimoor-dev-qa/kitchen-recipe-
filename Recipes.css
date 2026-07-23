@@ -5,10 +5,16 @@
     font-family: 'Poppins', sans-serif;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     width: 100%;
     min-height: 100vh;
     background: #fffefe;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -23,6 +29,7 @@ header {
     z-index: 100;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     transition: background 0.3s ease;
+    flex-shrink: 0;
 }
 
 .container {
@@ -34,7 +41,7 @@ header {
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 20px;
     color: #ffffff;
     transition: transform 0.3s ease;
 }
@@ -71,6 +78,7 @@ nav ul li {
 nav ul li a {
     color: #ffffff;
     text-decoration: none;
+    font-size: 16px;
     position: relative;
     padding-bottom: 4px;
     transition: opacity 0.3s ease;
@@ -223,6 +231,8 @@ footer {
     padding: 20px;
     color: #fff;
     text-align: center;
+    margin-top: auto;
+    flex-shrink: 0;
 }
 
 footer a {
