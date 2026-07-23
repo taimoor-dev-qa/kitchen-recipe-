@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Recipe Website</title>
     <link rel="stylesheet" href="contact.css">
 </head>
+
 <body>
 
     <!-- Header -->
@@ -14,6 +16,8 @@
             <h1 class="logo">Recipe Website</h1>
 
             <nav>
+                <div class="menu-icon">&#9776;</div>
+
                 <ul class="nav-list">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -33,7 +37,7 @@
     <!-- Contact Section -->
     <section class="contact">
 
-        <!-- Contact Info -->
+        <!-- Left Side: Contact Info -->
         <div class="contact-info">
             <h2>Get In Touch</h2>
 
@@ -46,22 +50,22 @@
             <p>9:00 AM - 6:00 PM</p>
         </div>
 
-        <!-- Contact Form -->
+        <!-- Right Side: Form -->
         <div class="contact-form">
 
             <h2>Send Message</h2>
 
             <form>
 
-                <input type="text" placeholder="Your Name" required>
+                <input type="text" placeholder="Full Name" required>
 
-                <input type="email" placeholder="Your Email" required>
+                <input type="email" placeholder="Email" required>
 
                 <input type="text" placeholder="Subject">
 
-                <textarea rows="6" placeholder="Write your message..."></textarea>
+                <textarea rows="6" placeholder="Message"></textarea>
 
-                <button type="submit">Send Message</button>
+                <button type="submit">Submit</button>
 
             </form>
 
@@ -69,11 +73,50 @@
 
     </section>
 
+    <!-- Google Map -->
+    <section class="map-section">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d217485.87!2d74.2287!3d31.4697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391904d0664ee9e5%3A0x7d3a729b6b3796c1!2sLahore%2C%20Pakistan!5e0!3m2!1sen!2s!4v1620000000000"
+            width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Recipe Website | All Rights Reserved.</p>
+        <div class="footer-container">
+
+            <div class="footer-col">
+                <h3>Recipe Website</h3>
+                <p>Bringing tasty and easy-to-follow recipes to food lovers around the world.</p>
+            </div>
+
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="recipes.html">Recipes</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">Facebook</a>
+                    <a href="#" aria-label="Instagram">Instagram</a>
+                    <a href="#" aria-label="YouTube">YouTube</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Recipe Website | All Rights Reserved.</p>
+        </div>
     </footer>
 
 </body>
+
 </html>
-```
