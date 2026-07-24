@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="images/images/logo.png">
     <link rel="stylesheet" href="style.css">
     <title>Recipe website</title>
 </head>
@@ -37,49 +36,261 @@
 
         </div>
     </section>
+
+    <!-- CATEGORY STRIP -->
+    <section class="category-strip">
+        <div class="category-item">
+            <span>🍛</span>
+            <p>Ramzan Aftari</p>
+        </div>
+        <div class="category-item">
+            <span>👨‍👩‍👧‍👦</span>
+            <p>Family Dinner</p>
+        </div>
+        <div class="category-item">
+            <span>🧒</span>
+            <p>Kids Favorite</p>
+        </div>
+        <div class="category-item">
+            <span>⏰</span>
+            <p>Quick Meals</p>
+        </div>
+        <div class="category-item">
+            <span>🥗</span>
+            <p>Healthy</p>
+        </div>
+        <div class="category-item">
+            <span>🍰</span>
+            <p>Desserts</p>
+        </div>
+        <div class="category-item">
+            <span>🍢</span>
+            <p>BBQ &amp; Grill</p>
+        </div>
+    </section>
+
+    <!-- RECIPE OF THE WEEK -->
+    <section class="recipe-of-week">
+        <div class="row-content">
+            <div class="row-text">
+                <span class="row-tag">⭐ Recipe of the Week</span>
+                <h2>Chicken Karahi</h2>
+                <p>A rich, spicy tomato-based chicken curry cooked in a traditional karahi — this week's most loved
+                    family dinner recipe, picked just for you.</p>
+                <a href="#" class="row-btn">View Recipe &rarr;</a>
+            </div>
+            <div class="row-image">
+                <img src="images/images/logo.png" alt="Recipe of the Week - Chicken Karahi"
+                    style="width: 220px; height: auto;">
+            </div>
+        </div>
+    </section>
+
     <!-- RECIPES SECTION-->
     <section class="recipes">
-        <h1>Featured Recipes</h1>
+        <h1>Featured Recipes</h1><br>
+        <p class="recipes-subtitle">Browse recipes by what fits your moment right now</p>
+
+        <!-- FILTER TABS -->
+        <div class="filter-tabs">
+            <button class="tab-btn active" data-filter="all">All</button>
+            <button class="tab-btn" data-filter="ramzan">Ramzan Aftari</button>
+            <button class="tab-btn" data-filter="family">Family Dinner</button>
+            <button class="tab-btn" data-filter="kids">Recipes for Kids</button>
+            <button class="tab-btn" data-filter="quick">Quick Meals</button>
+            <button class="tab-btn" data-filter="healthy">Healthy</button>
+            <button class="tab-btn" data-filter="dessert">Desserts</button>
+            <button class="tab-btn" data-filter="bbq">BBQ</button>
+        </div>
+
         <div class="recipes-section">
-            <div class="recipes-card">
-                <img src="images/images/dish-1.jpg" alt="Recipe 1">
-                <h3>Strawberry Custurd</h3>
-                <p>Strawberry Custard is a creamy, smooth, and refreshing dessert made with rich vanilla custard and
-                    fresh, juicy strawberries. Perfectly sweet and chilled, it's a delicious treat for any occasion..
-                </p>
+
+            <div class="recipes-card" data-category="dessert">
+                <img src="images/images/dish-1.jpg" alt="Strawberry Custard">
+                <h3>Strawberry Custard</h3>
+                <p>A creamy, smooth dessert made with rich vanilla custard and fresh strawberries.</p>
                 <a href="strawbery.html">View Recipe</a>
             </div>
-            <div class="recipes-card">
-                <img src="images/images/dish-2.jpg" alt="Recipe 1">
+
+            <div class="recipes-card" data-category="quick family">
+                <img src="images/images/dish-2.jpg" alt="Egg Fried Rice">
                 <h3>Egg Fried Rice</h3>
-                <p>Egg Fried Rice is a quick and flavorful dish made with fluffy rice, scrambled eggs, fresh vegetables,
-                    and savory seasonings. It's a satisfying meal that's perfect for lunch or dinner.</p>
+                <p>A quick and flavorful dish with fluffy rice, scrambled eggs, and fresh vegetables.</p>
                 <a href="egg-fried-rice.html">View Recipe</a>
             </div>
-            <div class="recipes-card">
-                <img src="images/images/dish-3.jpg" alt="Recipe 1">
+
+            <div class="recipes-card" data-category="bbq family">
+                <img src="images/images/dish-3.jpg" alt="BBQ">
                 <h3>B.B.Q</h3>
-                <p>BBQ is a smoky and flavorful dish made with tender, marinated meat grilled to perfection. Packed with
-                    rich spices and a delicious charred taste, it's a favorite for gatherings and special occasions.</p>
+                <p>Smoky, tender marinated meat grilled to perfection with rich spices.</p>
                 <a href="bbq.html">View Recipe</a>
             </div>
-            <div class="recipes-card">
-                <img src="images/images/dish-4.jpg" alt="Recipe 1">
+
+            <div class="recipes-card" data-category="dessert healthy">
+                <img src="images/images/dish-4.jpg" alt="Salad Custard">
                 <h3>Salad Custard</h3>
-                <p>Salad Custard is a creamy and refreshing dessert made with smooth vanilla custard, fresh seasonal
-                    fruits, and a touch of sweetness. Served chilled, it's a colorful and delicious treat for any
-                    occasion..</p>
+                <p>A creamy dessert made with smooth vanilla custard and fresh seasonal fruits.</p>
                 <a href="salad.html">View Recipe</a>
+            </div>
+
+            <div class="recipes-card" data-category="ramzan quick">
+                <img src="images/images/chanachat.jpg" alt="Chana Chaat">
+                <h3>Chana Chaat</h3>
+                <p>A tangy and spicy chickpea chaat — a light and refreshing iftar starter.</p>
+                <a href="#">View Recipe</a>
+            </div>
+
+            <div class="recipes-card" data-category="ramzan">
+                <img src="images/images/large.jpg" alt="Pakoras">
+                <h3>Crispy Pakoras</h3>
+                <p>Golden, crunchy fritters made with spiced gram flour batter — an iftar essential.</p>
+                <a href="#">View Recipe</a>
+            </div>
+
+            <div class="recipes-card" data-category="ramzan family">
+                <img src="images/images/fruti.jpg" alt="Fruit Chaat">
+                <h3>Fruit Chaat</h3>
+                <p>A refreshing mix of seasonal fruits tossed with chaat masala — light and cooling.</p>
+                <a href="#">View Recipe</a>
+            </div>
+
+            <div class="recipes-card" data-category="kids quick">
+                <img src="images/images/mac and cheese.jpg" alt="Mac and Cheese">
+                <h3>Mac and Cheese</h3>
+                <p>Creamy, cheesy pasta that kids love — comforting and quick to make.</p>
+                <a href="#">View Recipe</a>
+            </div>
+
+            <div class="recipes-card" data-category="kids dessert">
+                <img src="images/images/choco.jpg" alt="Chocolate Pancakes">
+                <h3>Chocolate Pancakes</h3>
+                <p>Fluffy pancakes with a chocolatey twist — a fun breakfast children ask for again.</p>
+                <a href="#">View Recipe</a>
+            </div>
+
+            <div class="recipes-card" data-category="healthy quick">
+                <img src="images/images/grilled.jpg" alt="Grilled Chicken Salad">
+                <h3>Grilled Chicken Salad</h3>
+                <p>Lean grilled chicken over fresh greens with a light dressing.</p>
+                <a href="#">View Recipe</a>
+            </div>
+
+            <div class="recipes-card" data-category="family bbq">
+                <img src="images/images/karahi.webp" alt="Chicken Karahi">
+                <h3>Chicken Karahi</h3>
+                <p>A rich, spicy tomato-based chicken curry — a family dinner favorite.</p>
+                <a href="#">View Recipe</a>
+            </div>
+
+            <div class="recipes-card" data-category="ramzan dessert">
+                <img src="images/images/kkk.jpg" alt="Sheer Khurma">
+                <h3>Sheer Khurma</h3>
+                <p>A sweet vermicelli dessert with milk, dates, and nuts — beloved for Eid.</p>
+                <a href="#">View Recipe</a>
             </div>
 
         </div>
 
+        <div class="no-results" style="display:none;">
+            <p>No recipes found in this category yet.</p>
+        </div>
+
     </section>
+
+    <!-- STATS SECTION -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h2>150+</h2>
+                <p>Recipes Shared</p>
+            </div>
+            <div class="stat-item">
+                <h2>25K+</h2>
+                <p>Happy Cooks</p>
+            </div>
+            <div class="stat-item">
+                <h2>40+</h2>
+                <p>Recipe Categories</p>
+            </div>
+            <div class="stat-item">
+                <h2>4.8★</h2>
+                <p>Average Rating</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="testimonials">
+        <h1>What People Are Saying</h1> <br> <br>
+        <p class="recipes-subtitle">Real feedback from home cooks who tried our recipes</p>
+
+        <div class="testimonial-grid">
+
+            <div class="testimonial-card">
+                <p class="stars">★★★★★</p>
+                <p class="testimonial-text">"The Chicken Karahi recipe turned out exactly like restaurant style. My
+                    family loved it so much!"</p>
+                <h4>— Ayesha K.</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="stars">★★★★★</p>
+                <p class="testimonial-text">"Simple, clear steps for iftar recipes. The Pakoras and Chana Chaat are now
+                    a Ramzan staple at home."</p>
+                <h4>— Hamza R.</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="stars">★★★★☆</p>
+                <p class="testimonial-text">"My kids ask for the Chocolate Pancakes every weekend now. Easy to follow
+                    even for beginners."</p>
+                <h4>— Sana M.</h4>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- INSTAGRAM GALLERY -->
+    <section class="insta-gallery">
+        <h1>Follow Our Kitchen</h1> <br> <br>
+        <p class="recipes-subtitle">@recipewebsite — tag us in your kitchen creations</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="images/images/dish-1.jpg" alt="Gallery photo"></div>
+            <div class="gallery-item"><img src="images/images/dish-2.jpg" alt="Gallery photo"></div>
+            <div class="gallery-item"><img src="images/images/dish-3.jpg" alt="Gallery photo"></div>
+            <div class="gallery-item"><img src="images/images/dish-4.jpg" alt="Gallery photo"></div>
+            <div class="gallery-item"><img src="images/images/fish-dish.jpg" alt="Gallery photo"></div>
+            <div class="gallery-item"><img src="images/images/large.jpg" alt="Gallery photo"></div>
+        </div>
+    </section>
+
+    <!-- CALL TO ACTION BANNER -->
+    <section class="cta-banner">
+        <h2>Hungry for More Recipes?</h2>
+        <p>Explore our full recipe collection and start cooking something delicious today.</p>
+        <a href="Recipes.html" class="cta-btn">Browse All Recipes</a>
+    </section>
+
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
+        <div class="newsletter-box">
+            <h2>Get New Recipes in Your Inbox</h2>
+            <p>Subscribe and never miss a new recipe, cooking tip, or seasonal special.</p>
+            <form action="#" class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
         <div>
             <p> &copy 2026 delecious recipes</p>
         </div>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
