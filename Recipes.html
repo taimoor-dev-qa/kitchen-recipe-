@@ -38,53 +38,252 @@
         </div>
     </section>
 
-    <!-- Recipes Section -->
-    <section class="recipes">
+    <!-- Main Layout: Sidebar + Content -->
+    <section class="recipes-page">
 
-        <h2>Our Recipe Collection</h2>
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <h3>Categories</h3>
+            <ul class="sidebar-list">
+                <li><a href="#" class="sidebar-link active" data-filter="all">All Recipes <span>12</span></a></li>
+                <li><a href="#" class="sidebar-link" data-filter="ramzan">Ramzan Aftari <span>4</span></a></li>
+                <li><a href="#" class="sidebar-link" data-filter="family">Family Dinner <span>4</span></a></li>
+                <li><a href="#" class="sidebar-link" data-filter="kids">Recipes for Kids <span>2</span></a></li>
+                <li><a href="#" class="sidebar-link" data-filter="quick">Quick Meals <span>3</span></a></li>
+                <li><a href="#" class="sidebar-link" data-filter="healthy">Healthy <span>2</span></a></li>
+                <li><a href="#" class="sidebar-link" data-filter="dessert">Desserts <span>3</span></a></li>
+                <li><a href="#" class="sidebar-link" data-filter="bbq">BBQ &amp; Grill <span>2</span></a></li>
+            </ul>
 
-        <div class="recipes-section">
+            <div class="sidebar-banner">
+                <h4>Ramzan Special</h4>
+                <p>15+ iftar recipes to make your evenings easier.</p>
+                <a href="#">Explore &rarr;</a>
+            </div>
+        </aside>
 
-            <div class="recipes-card">
-                <img src="images/images/dish-4.jpg" alt="Pasta">
-                <h3>Creamy Pasta</h3>
-                <p>A rich and creamy pasta dish ready in just 20 minutes.</p>
-                <a href="#">View Recipe</a>
+        <!-- MAIN CONTENT -->
+        <div class="recipes-main">
+
+            <!-- Search + Sort Bar -->
+            <div class="toolbar">
+                <div class="search-bar">
+                    <input type="text" id="recipeSearch" placeholder="Search recipes by name...">
+                    <button type="button"><span>&#128269;</span></button>
+                </div>
+
+                <div class="sort-bar">
+                    <label for="sortSelect">Sort by:</label>
+                    <select id="sortSelect">
+                        <option value="popular">Popular</option>
+                        <option value="newest">Newest</option>
+                        <option value="quick">Quick Recipes</option>
+                        <option value="az">A - Z</option>
+                    </select>
+                </div>
             </div>
 
-            <div class="recipes-card">
-                <img src="images/images/dish-1.jpg" alt="Salad">
-                <h3>Fresh Garden Salad</h3>
-                <p>A light and healthy salad packed with fresh vegetables.</p>
-                <a href="#">View Recipe</a>
+            <!-- Filter Tabs -->
+            <div class="filter-tabs">
+                <button class="tab-btn active" data-filter="all">All</button>
+                <button class="tab-btn" data-filter="ramzan">Ramzan Aftari</button>
+                <button class="tab-btn" data-filter="family">Family Dinner</button>
+                <button class="tab-btn" data-filter="kids">Recipes for Kids</button>
+                <button class="tab-btn" data-filter="quick">Quick Meals</button>
+                <button class="tab-btn" data-filter="healthy">Healthy</button>
+                <button class="tab-btn" data-filter="dessert">Desserts</button>
+                <button class="tab-btn" data-filter="bbq">BBQ</button>
             </div>
 
-            <div class="recipes-card">
-                <img src="images/images/dish-3.jpg" alt="BBQ">
-                <h3>Smoky BBQ Chicken</h3>
-                <p>Juicy grilled chicken with a smoky homemade BBQ sauce.</p>
-                <a href="#">View Recipe</a>
+            <p class="results-count">Showing <strong>12</strong> recipes</p>
+
+            <!-- Recipes Grid -->
+            <div class="recipes-section">
+
+                <div class="recipes-card" data-category="dessert">
+                    <div class="card-img-wrap">
+                        <img src="images/images/dish-1.jpg" alt="Strawberry Custard">
+                        <span class="badge">220 kcal</span>
+                    </div>
+                    <h3>Strawberry Custard</h3>
+                    <p>A creamy, smooth dessert made with rich vanilla custard and fresh strawberries.</p>
+                    <div class="card-meta">
+                        <span>⏰ 25 min</span>
+                        <span>🍽 4 servings</span>
+                    </div>
+                    <a href="strawberry-custard.html">View Recipe</a>
+                </div>
+
+                <div class="recipes-card" data-category="quick family">
+                    <div class="card-img-wrap">
+                        <img src="images/images/dish-2.jpg" alt="Egg Fried Rice">
+                        <span class="badge">310 kcal</span>
+                    </div>
+                    <h3>Egg Fried Rice</h3>
+                    <p>A quick and flavorful dish with fluffy rice, scrambled eggs, and fresh vegetables.</p>
+                    <div class="card-meta">
+                        <span>⏰ 20 min</span>
+                        <span>🍽 3 servings</span>
+                    </div>
+                    <a href="egg-fried-rice.html">View Recipe</a>
+                </div>
+
+                <div class="recipes-card" data-category="bbq family">
+                    <div class="card-img-wrap">
+                        <img src="images/images/dish-3.jpg" alt="BBQ">
+                        <span class="badge">380 kcal</span>
+                    </div>
+                    <h3>Smoky BBQ Chicken</h3>
+                    <p>Smoky, tender marinated meat grilled to perfection with rich spices.</p>
+                    <div class="card-meta">
+                        <span>⏰ 40 min</span>
+                        <span>🍽 4 servings</span>
+                    </div>
+                    <a href="bbq.html">View Recipe</a>
+                </div>
+
+                <div class="recipes-card" data-category="dessert healthy">
+                    <div class="card-img-wrap">
+                        <img src="images/images/dish-4.jpg" alt="Salad Custard">
+                        <span class="badge">180 kcal</span>
+                    </div>
+                    <h3>Salad Custard</h3>
+                    <p>A creamy dessert made with smooth vanilla custard and fresh seasonal fruits.</p>
+                    <div class="card-meta">
+                        <span>⏰ 15 min</span>
+                        <span>🍽 2 servings</span>
+                    </div>
+                    <a href="salad.html">View Recipe</a>
+                </div>
+
+                <div class="recipes-card" data-category="ramzan quick">
+                    <div class="card-img-wrap">
+                        <img src="images/images/chanachat.jpg" alt="Chana Chaat">
+                        <span class="badge">150 kcal</span>
+                    </div>
+                    <h3>Chana Chaat</h3>
+                    <p>A tangy and spicy chickpea chaat — a light and refreshing iftar starter.</p>
+                    <div class="card-meta">
+                        <span>⏰ 15 min</span>
+                        <span>🍽 3 servings</span>
+                    </div>
+                    <a href="#">View Recipe</a>
+                </div>
+
+                <div class="recipes-card" data-category="ramzan">
+                    <div class="card-img-wrap">
+                        <img src="images/images/large.jpg" alt="Pakoras">
+                        <span class="badge">260 kcal</span>
+                    </div>
+                    <h3>Crispy Pakoras</h3>
+                    <p>Golden, crunchy fritters made with spiced gram flour batter — an iftar essential.</p>
+                    <div class="card-meta">
+                        <span>⏰ 30 min</span>
+                        <span>🍽 4 servings</span>
+                    </div>
+                    <a href="#">View Recipe</a>
+                </div>
+
+                <div class="recipes-card" data-category="ramzan family">
+                    <div class="card-img-wrap">
+                        <img src="images/images/fruti.jpg" alt="Fruit Chaat">
+                        <span class="badge">120 kcal</span>
+                    </div>
+                    <h3>Fruit Chaat</h3>
+                    <p>A refreshing mix of seasonal fruits tossed with chaat masala — light and cooling.</p>
+                    <div class="card-meta">
+                        <span>⏰ 10 min</span>
+                        <span>🍽 4 servings</span>
+                    </div>
+                    <a href="#">View Recipe</a>
+                </div>
+
+                <div class="recipes-card" data-category="kids quick">
+                    <div class="card-img-wrap">
+                        <img src="images/images/mac and cheese.jpg" alt="Mac and Cheese">
+                        <span class="badge">340 kcal</span>
+                    </div>
+                    <h3>Mac and Cheese</h3>
+                    <p>Creamy, cheesy pasta that kids love — comforting and quick to make.</p>
+                    <div class="card-meta">
+                        <span>⏰ 20 min</span>
+                        <span>🍽 3 servings</span>
+                    </div>
+                    <a href="#">View Recipe</a>
+                </div>
+
+                <div class="recipes-card" data-category="kids dessert">
+                    <div class="card-img-wrap">
+                        <img src="images/images/choco.jpg" alt="Chocolate Pancakes">
+                        <span class="badge">290 kcal</span>
+                    </div>
+                    <h3>Chocolate Pancakes</h3>
+                    <p>Fluffy pancakes with a chocolatey twist — a fun breakfast children ask for again.</p>
+                    <div class="card-meta">
+                        <span>⏰ 20 min</span>
+                        <span>🍽 2 servings</span>
+                    </div>
+                    <a href="#">View Recipe</a>
+                </div>
+
+                <div class="recipes-card" data-category="healthy quick">
+                    <div class="card-img-wrap">
+                        <img src="images/images/grilled.jpg" alt="Grilled Chicken Salad">
+                        <span class="badge">210 kcal</span>
+                    </div>
+                    <h3>Grilled Chicken Salad</h3>
+                    <p>Lean grilled chicken over fresh greens with a light dressing.</p>
+                    <div class="card-meta">
+                        <span>⏰ 20 min</span>
+                        <span>🍽 2 servings</span>
+                    </div>
+                    <a href="#">View Recipe</a>
+                </div>
+
+                <div class="recipes-card" data-category="family bbq">
+                    <div class="card-img-wrap">
+                        <img src="images/images/karahi.webp" alt="Chicken Karahi">
+                        <span class="badge">420 kcal</span>
+                    </div>
+                    <h3>Chicken Karahi</h3>
+                    <p>A rich, spicy tomato-based chicken curry — a family dinner favorite.</p>
+                    <div class="card-meta">
+                        <span>⏰ 45 min</span>
+                        <span>🍽 5 servings</span>
+                    </div>
+                    <a href="#">View Recipe</a>
+                </div>
+
+                <div class="recipes-card" data-category="ramzan dessert">
+                    <div class="card-img-wrap">
+                        <img src="images/images/kkk.jpg" alt="Sheer Khurma">
+                        <span class="badge">260 kcal</span>
+                    </div>
+                    <h3>Sheer Khurma</h3>
+                    <p>A sweet vermicelli dessert with milk, dates, and nuts — beloved for Eid.</p>
+                    <div class="card-meta">
+                        <span>⏰ 30 min</span>
+                        <span>🍽 6 servings</span>
+                    </div>
+                    <a href="#">View Recipe</a>
+                </div>
+
             </div>
 
-            <div class="recipes-card">
-                <img src="images/images/dish-3.jpg" alt="Dessert">
-                <h3>Chocolate Cake</h3>
-                <p>A soft and moist chocolate cake perfect for dessert lovers.</p>
-                <a href="#">View Recipe</a>
+            <div class="no-results" style="display:none;">
+                <p>No recipes found. Try a different filter or search term.</p>
             </div>
 
-            <div class="recipes-card">
-                <img src="images/images/heo-image.jpg" alt="Soup">
-                <h3>Vegetable Soup</h3>
-                <p>A warm and comforting soup made with fresh vegetables.</p>
-                <a href="#">View Recipe</a>
+            <!-- Pagination / Load More -->
+            <div class="load-more-wrap">
+                <button class="load-more-btn">Load More Recipes</button>
             </div>
 
-            <div class="recipes-card">
-                <img src="images/images/dish-4.jpg" alt="Breakfast">
-                <h3>Quick Breakfast Bowl</h3>
-                <p>A nutritious and quick breakfast to start your day right.</p>
-                <a href="#">View Recipe</a>
+            <div class="pagination">
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">Next &rarr;</button>
             </div>
 
         </div>
@@ -95,6 +294,5 @@
     <footer>
         <p>&copy; 2026 Delicious Recipes. All Rights Reserved.</p>
     </footer>
-
 </body>
 </html>
